@@ -16,7 +16,10 @@ def fetch(url):
 
 # Requisito 2
 def scrape_updates(html_content):
-    """Seu código deve vir aqui"""
+    import parsel
+
+    selector = parsel.Selector(html_content)
+    return selector.css("h2 a::attr(href)").getall()
 
 
 # Requisito 3
