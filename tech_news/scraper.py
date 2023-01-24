@@ -33,7 +33,31 @@ def scrape_next_page_link(html_content):
 
 # Requisito 4
 def scrape_news(html_content):
-    """Seu código deve vir aqui"""
+    import parsel
+
+    selector = parsel.Selector(html_content)
+    url = selector.css("link[rel=canonical]::attr(href)").get()
+    title = selector.css("h1.entry-title::text").get()
+    timestamp = selector.css("li.meta-date::text").get()
+    writer = selector.css("a.url.fn.n::text").get()
+    comments_count = selector.css("div.comment-body").getall()
+    # Referência: https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type
+    summary = selector.css(
+        ".entry-content > p:nth-of-type(1) *::text"
+    ).getall()
+    tags = selector.css(".post-tags a::text").getall()
+    category = selector.css("span.label::text").get()
+
+    return {
+        "url": url,
+        "title": (title).strip(),
+        "timestamp": timestamp,
+        "writer": writer,
+        "comments_count": int(comments_count) if comments_count else 0,
+        "summary": "".join(summary).strip(),
+        "tags": tags,
+        "category": category,
+    }
 
 
 # Requisito 5
