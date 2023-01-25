@@ -1,3 +1,6 @@
+from tech_news.database import create_news
+
+
 # Requisito 1
 def fetch(url):
     import requests
@@ -62,4 +65,23 @@ def scrape_news(html_content):
 
 # Requisito 5
 def get_tech_news(amount):
-    """Seu código deve vir aqui"""
+    URL_BASE = "https://blog.betrybe.com"
+    list_urls = []
+
+    # Refer.: https://www.w3schools.com/python/python_lists_comprehension.asp
+    def get_link_page(links):
+        new_list = [scrape_news(fetch(url)) for url in links[:(amount)]]
+        return new_list
+
+    def get_urls(url):
+        list_urls.extend(scrape_updates(fetch(url)))
+
+        if len(list_urls) <= amount:
+            next_url = scrape_next_page_link(fetch(url))
+            get_urls(next_url)
+
+        return get_link_page(list_urls)
+
+    final_result = get_urls(URL_BASE)
+    create_news(final_result)
+    return final_result
