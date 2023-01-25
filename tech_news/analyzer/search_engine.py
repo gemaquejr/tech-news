@@ -1,6 +1,12 @@
+from tech_news.database import search_news
+
+
 # Requisito 6
 def search_by_title(title):
-    """Seu código deve vir aqui"""
+    # https://stackoverflow.com/questions/26699885/how-can-i-use-a-regex-variable-in-a-query-for-mongodb
+    query = {"title": {"$regex": title, "$options": "i"}}
+    page = search_news(query)
+    return [(new["title"], new["url"]) for new in page]
 
 
 # Requisito 7
