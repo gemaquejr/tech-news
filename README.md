@@ -8,6 +8,8 @@ O projeto foi para praticar técnicas de raspagem de dados, armazenar os dados o
 
 - ⚡ Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.
 
+- ⚡ Docker é uma plataforma open source que facilita a criação e administração de ambientes isolados dentro de um container.
+
 - ⚡ MongoDB é um software de banco de dados orientado a documentos livre, de código aberto e multiplataforma, escrito na linguagem C++.
 
 ## ✋🏻 Pré-requisitos
@@ -15,6 +17,8 @@ O projeto foi para praticar técnicas de raspagem de dados, armazenar os dados o
 - [git](https://git-scm.com/downloads): Ferramenta para gerenciar o código-fonte
 
 - [Visual Studio Code](https://code.visualstudio.com/): Editor de Código Fonte
+
+- [Docker](https://www.docker.com/): Software de código aberto usado para implantar aplicativos dentro de containers virtuais.
 
 - [MongoDB](https://www.mongodb.com/): É uma nova ideia de banco de dados trazendo conceitos de Banco de Dados Orientado a Documentos.
 
