@@ -28,7 +28,7 @@ Rodar MongoDB via Docker:
 
 ### `docker-compose up -d mongodb`
 
-No diretório do projeto, crie o ambiente virtual e ativá-lo:
+No diretório do projeto, criar o ambiente virtual e ativá-lo:
 
 ### `python3 -m venv .venv`
 
