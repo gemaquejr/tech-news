@@ -1,14 +1,12 @@
 # Tech News
 
-Essa aplicação em Python é um gerador de relatórios.
+Essa aplicação em Python tem como principal objetivo fazer consultas em notícias sobre tecnologia.
 
-O projeto foi para praticar a utilização do terminal interativo do Python, aplicar conceitos de POO (Programação Orientada a Objetos) e a leitura e escrita de arquivos CSV, JSON e XML.
+O projeto foi para praticar técnicas de raspagem de dados, armazenar os dados obtidos em um banco de dados e extrair dados de conteúdo HTML.
 
 ## 🚀 Tecnologia
 
 - ⚡ Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.
-
-- ⚡ Pytest é uma estrutura de teste Python que se originou do projeto PyPy.
 
 - ⚡ MongoDB é um software de banco de dados orientado a documentos livre, de código aberto e multiplataforma, escrito na linguagem C++.
 
