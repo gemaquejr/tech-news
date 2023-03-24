@@ -24,6 +24,10 @@ O projeto foi para praticar técnicas de raspagem de dados, armazenar os dados o
 
 ## :hammer_and_wrench: Antes de iniciar o projeto.
 
+Rodar MongoDB via Docker:
+
+### `docker-compose up -d mongodb`
+
 No diretório do projeto, crie o ambiente virtual e ativá-lo:
 
 ### `python3 -m venv .venv`
